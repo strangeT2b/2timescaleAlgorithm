@@ -1,6 +1,5 @@
 from Funcs.LD.loadDistributeFanbi import loadDistributeFanbi
 from Funcs.LD.loadDistributePowerFlowOrg import loadDistributePowerFlowOrg
-from Funcs.LD.loadDistributePowerFlowLin import loadDistributePowerFlowLin
 from Funcs.LD.loadDistribuePowerFlowOrgComplete import loadDistributePowerFlowOrgComplete
 from Funcs.admittanceMatrix import admittanceMatrix
 from Funcs.controlParams import Params
@@ -23,7 +22,7 @@ par.j_in_min = -20
 process = Process(params=par)
 process.compute_DFs()
 process.compute_Ys()
-PF_data, load_avg = loadDistributePowerFlowOrgComplete(LD_start=0
+PF_data, load_avg = loadDistributePowerFlowOrg(LD_start=0
                                             ,LD_horizon=process.params.offline_horizon
                                             ,DFs=process.DFs
                                             ,DFs_noStop=process.DFs_noStop
@@ -31,8 +30,8 @@ PF_data, load_avg = loadDistributePowerFlowOrgComplete(LD_start=0
                                             ,PV_Price=None
                                             ,in_PV=False
                                             ,Ys=process.Ys
-                                            ,Ycs=process.Ycs
-                                            ,Yrs=process.Yrs
+                                            # ,Ycs=process.Ycs
+                                            # ,Yrs=process.Yrs
                                             ,params=process.params)
 
 

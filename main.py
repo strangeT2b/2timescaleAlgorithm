@@ -46,13 +46,13 @@ import json
 import copy
 import random
 
-log = "log18_newFunc_sec60_compress"
+log = "log"
 SEED = 15  # 你可以统一设置为15或其他任意整数
 # random.seed(SEED)
 # np.random.seed(SEED)
 
 par = Params()
-par.offline_horizon = int(6*60*60)
+par.offline_horizon = int(18*60*60)
 par.online_horizon = 15
 prcs = Process(par)
 # prcs.load_PV_Price()
