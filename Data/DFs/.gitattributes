@@ -1,4 +1,0 @@
-Data/DFs/22Hour_delay4m_I_LD.csv filter=lfs diff=lfs merge=lfs -text
-Data/DFs/oneDay_delay4m_I.csv filter=lfs diff=lfs merge=lfs -text
-/GrbLog/offline_org.MPS filter=lfs diff=lfs merge=lfs -text
-/GrbLog/offline_lin.MPS filter=lfs diff=lfs merge=lfs -text
